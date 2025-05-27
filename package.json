@@ -1,0 +1,27 @@
+{
+  "name": "playwright_project",
+  "version": "1.0.0",
+  "main": "test.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jlawrence106/Playwright_Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jlawrence106/Playwright_Project/issues"
+  },
+  "homepage": "https://github.com/jlawrence106/Playwright_Project#readme",
+  "description": "",
+  "devDependencies": {
+    "@cucumber/cucumber": "^11.3.0",
+    "@playwright/test": "^1.52.0",
+    "@types/node": "^22.15.19"
+  },
+  "dependencies": {
+    "dotenv": "^16.5.0"
+  },
+  "type": "module"
+}
