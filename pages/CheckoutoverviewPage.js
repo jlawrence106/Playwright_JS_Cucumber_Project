@@ -1,8 +1,8 @@
-import { Page } from "@playwright/test"; 
+import page from "@playwright/test"; 
 import { test, expect } from '@playwright/test';
-import * as utils from '../utils/commonUtils';
+import * as utils from '../utils/commonUtils.js';
 
-class CheckoutoverviewPage {
+export class CheckoutoverviewPage {
 
     constructor (page) {
 
@@ -51,5 +51,3 @@ class CheckoutoverviewPage {
     }
 
 }
-
-module.exports = {CheckoutoverviewPage};

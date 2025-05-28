@@ -1,7 +1,7 @@
-import { Page } from "@playwright/test"; 
+import page from "@playwright/test"; 
 import { test, expect } from '@playwright/test';
 
-class CheckoutcompletePage {
+export class CheckoutcompletePage {
 
     constructor (page) {
         this.page = page;
@@ -15,5 +15,3 @@ class CheckoutcompletePage {
     }
 
 }
-
-module.exports = {CheckoutcompletePage}

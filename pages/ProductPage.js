@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-class ProductPage{
+export class ProductPage{
 
     constructor (page) {
         this.page = page;
@@ -38,5 +38,3 @@ class ProductPage{
         expect(this.page.getByText('Products')).toBeVisible();
     }
 }
-
-module.exports = {ProductPage}

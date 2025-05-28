@@ -1,7 +1,7 @@
-import { Page } from "@playwright/test"; 
+import page from "@playwright/test"; 
 import { test, expect } from '@playwright/test';
 
-class MycartPage{
+export class MycartPage{
 
     constructor(page) {
         this.page = page;
@@ -22,5 +22,3 @@ class MycartPage{
     }
 
 }
-
-module.exports = {MycartPage}

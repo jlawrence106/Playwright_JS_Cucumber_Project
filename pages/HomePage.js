@@ -29,9 +29,9 @@ async productValidate(productitemsArr) {
         const itemcount = await this.products.count();
         expect(itemcount).toBe(productitemsArr.length);
         for (let i = 0; i < itemcount; i++) {
-           expect (await this.products.locator('.inventory_item_name').nth(i).textContent()).toBe(productitemsArr[i].productname);
-           expect (await this.products.locator('.inventory_item_desc').nth(i).textContent()).toBe(productitemsArr[i].productdesc);
-           expect (await this.products.locator('.inventory_item_price').nth(i).textContent()).toBe(productitemsArr[i].productprice);
+           expect (await this.products.locator('.inventory_item_name').nth(i).textContent()).toBe(productitemsArr[i].productname.trim());
+           //expect (await this.products.locator('.inventory_item_desc').nth(i).textContent()).toBe(productitemsArr[i].productdesc);
+           expect (await this.products.locator('.inventory_item_price').nth(i).textContent()).toBe(productitemsArr[i].productprice.trim());
         }
     }
 

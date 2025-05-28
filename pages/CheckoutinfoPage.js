@@ -1,7 +1,7 @@
-import { Page } from "@playwright/test"; 
+import page from "@playwright/test"; 
 import { test, expect } from '@playwright/test';
 
-class CheckoutinfoPage{
+export class CheckoutinfoPage{
 
     constructor(page) {
         this.page = page;
@@ -13,13 +13,11 @@ class CheckoutinfoPage{
     
     }
 
-    async submitContinue (buyerdetails) {
-        await this.firstname.fill(buyerdetails.fname);
-        await this.lastname.fill(buyerdetails.lname);
-        await this.zipcode.fill(buyerdetails.zipcode);
+    async submitContinue (fname, lname, zipcode) {
+        await this.firstname.fill(fname);
+        await this.lastname.fill(lname);
+        await this.zipcode.fill(zipcode);
         await this.continue.click();
         expect(this.page.getByText('Checkout: Overview')).toBeVisible();
     }
 }
-
-module.exports = {CheckoutinfoPage}

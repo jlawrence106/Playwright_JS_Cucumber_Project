@@ -36,5 +36,20 @@ export function getNow() {
     return `${day}${month}${year}${hours}${minutes}${seconds}`;
   }
   
+//JS Datatable to JSON Object
+ export function dataTableToJSObject(dataTable) {
+  const jsObjectArray = [];
+  const columns = dataTable.columns;
+
+  for (const [productName, expectedPrice] of Object.entries(expectedProducts))
+  for (const row of dataTable.rows) {
+    const jsObject = {};
+    for (let i = 0; i < columns.length; i++) {
+      jsObject[columns[i]] = row[i];
+    }
+    jsObjectArray.push(jsObject);
+  }
+  return jsObjectArray;
+}
   
 
